@@ -33,7 +33,7 @@ export default function ActivityDetails({
         <Dialog.Panel>
           <img
             alt={`${activity.category}`}
-            src={`/assets/categoryImages/${activity.category}`}
+            src={`/assets/categoryImages/${activity.category?.toLowerCase()}.jpg`}
           />
           <Dialog.Title>{activity.title}</Dialog.Title>
           <Dialog.Description>{activity.description}</Dialog.Description>

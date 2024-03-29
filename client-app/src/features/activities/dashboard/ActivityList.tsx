@@ -11,11 +11,6 @@ export default function ActivityList({ activities }: Props) {
 
   const [detail, setDetail] = useState<Activity>({} as Activity);
 
-  const handleToggleDetails = (activity: Activity) => {
-    setIsShowing(!isShowing);
-    setDetail(activity);
-  };
-
   return (
     <div>
       <ul>
@@ -39,7 +34,10 @@ export default function ActivityList({ activities }: Props) {
                 type='button'
                 title='View'
                 className='text-sm leading-6 text-white bg-gray-900'
-                onClick={() => handleToggleDetails(activity)}>
+                onClick={() => {
+                  setDetail(activity);
+                  setIsShowing(true);
+                }}>
                 View
               </button>
             </div>
