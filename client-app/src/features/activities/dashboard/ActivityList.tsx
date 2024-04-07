@@ -26,7 +26,6 @@ export default function ActivityList({ activities }: Props) {
               <p className='mt-1 truncate text-xs leading-5 text-gray-500'>
                 {activity.description}
               </p>
-              <p className='mt-1'>{activity.city}</p>
               <p className='mt-1 text-sm'>{activity.category}</p>
             </div>
             <div className='hidden shrink-0 sm:flex sm:flex-col sm:items-end'>
